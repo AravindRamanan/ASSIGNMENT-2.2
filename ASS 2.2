@@ -1,6 +1,28 @@
 1)HDFS:
-*) HDFS is the primary distributed storage used by Hadoop applications. 
-*) A HDFS cluster primarily consists of a NameNode that manages the file system metadata and DataNodes that store the actual data. 
+* HDFS is the primary distributed storage used by Hadoop applications. 
+* A HDFS cluster primarily consists of a NameNode that manages the file system metadata and DataNodes that store the actual data.
+
+HDFS follows the master-slave architecture and it has the following elements.
+
+1)Namenode:
+The namenode is the commodity hardware that contains the GNU/Linux operating system and the namenode software. It is a software that can be run on commodity hardware. The system having the namenode acts as the master server and it does the following tasks:
+
+        * Manages the file system namespace.
+        * Regulates client’s access to files.
+        * It also executes file system operations such as renaming, closing, and opening files and directories.
+2)Datanode:
+The datanode is a commodity hardware having the GNU/Linux operating system and datanode software. For every node (Commodity hardware/System) in a cluster, there will be a datanode. These nodes manage the data storage of their system.
+
+        * Datanodes perform read-write operations on the file systems, as per client request.
+        * They also perform operations such as block creation, deletion, and replication according to the instructions of the namenode.
+
+Goals of HDFS:
+
+* Fault detection and recovery : Since HDFS includes a large number of commodity hardware, failure of components is frequent. Therefore HDFS should have mechanisms for quick and automatic fault detection and recovery.
+
+* Huge datasets : HDFS should have hundreds of nodes per cluster to manage the applications having huge datasets.
+
+* Hardware at data : A requested task can be done efficiently, when the computation takes place near the data. Especially where huge datasets are involved, it reduces the network traffic and increases the throughput.
 
 2)HADOOP CLUSTER:
 
