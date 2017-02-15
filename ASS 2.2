@@ -16,14 +16,6 @@ The datanode is a commodity hardware having the GNU/Linux operating system and d
         * Datanodes perform read-write operations on the file systems, as per client request.
         * They also perform operations such as block creation, deletion, and replication according to the instructions of the namenode.
 
-Goals of HDFS:
-
-* Fault detection and recovery : Since HDFS includes a large number of commodity hardware, failure of components is frequent. Therefore HDFS should have mechanisms for quick and automatic fault detection and recovery.
-
-* Huge datasets : HDFS should have hundreds of nodes per cluster to manage the applications having huge datasets.
-
-* Hardware at data : A requested task can be done efficiently, when the computation takes place near the data. Especially where huge datasets are involved, it reduces the network traffic and increases the throughput.
-
 2)HADOOP CLUSTER:
 
               * A Hadoop cluster is a special type of computational cluster designed specifically for storing and analyzing huge amounts of unstructured data in a distributed computing environment. 
